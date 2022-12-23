@@ -1,0 +1,27 @@
+body{
+    background-image: url("img.png");
+    background-repeat: initial;
+}
+p{
+    border: 3px dashed white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 150px;
+    height: 190px;
+    background-color: brown;
+    color: white;
+    margin: 15px;
+    padding: 15px;
+}
+h1{
+    background-color: #0d9900;
+    float: left ;
+    clear: both;
+}
+div{
+    float: left;
+}
+div.red{
+    background-color: rgb(145, 176, 20);
+    color: white;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Örnek</title>
+        <meta charset="utf-8"/>
+        <style>
+            span{
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <head>
+   <!-- <h1>Örnek Sayfa</h1>
+        <p>İçerik</p>-->
+        <h1>Sınav Sonucu</h1>
+        <form>
+            <input type="text" onchange="hesapla()" id="vize" placeholder="Vize"/> 
+            <input type="text" onchange="hesapla()" id="final" placeholder="Final"/>
+          <!-- <button onclick="hesapla()">Hesapla</button>   onchance buton kullanmadan otomatik hesaplıyor --> 
+        </form>
+        <p>Durum:<span id="durum"></span></p>
+        <p>Ortalama:<span id="ortalama"></span></p>
+        <p>Harf Notu:<span id="harfnotu"></span></p>
+        <script>
+            function hesapla(){
+                event.preventDefault(); // Butona basınca sayfa sıfırlanmaması için
+                let vize = document.getElementById("vize").value;
+                let final = document.getElementById("final").value;
+                let ortalama = vize*0.4 +final*0.6;
+                document.getElementById("ortalama").innerHTML=ortalama;
+
+                //DURUM
+                if(final>=50 &&ortalama>=50){
+                    document.getElementById("durum").innerHTML="GEÇTİ";
+                }
+                else{
+                    document.getElementById("durum").innerHTML="KALDI";
+                }
+
+                //HARF NOTU
+                let harfnotu="";
+                if(final<50){
+                    harfnotu="FF";
+                }
+                else if(ortalama<40){
+                    harfnotu="FF";
+                }
+                else if(ortalama<50){
+                    harfnotu="FD";
+                }
+                else if(ortalama<57){
+                    harfnotu="DD";
+                }
+                else if(ortalama<64){
+                    harfnotu="DC";
+                }
+                else if(ortalama<71){
+                    harfnotu="CC";
+                }
+                else if(ortalama<78){
+                    harfnotu="CB";
+                }
+                else if(ortalama<85){
+                    harfnotu="BB";
+                }
+                else if(ortalama<92){
+                    harfnotu="BA";
+                }
+                else{
+                    harfnotu="AA";
+                }
+                document.getElementById("harfnotu").innerHTML=harfnotu;
+            }
+        </script>
+        <!--
+            const değişmeyen
+            let değişebilen
+            DOM=document object moment
+            queryselector id ayırmak için   document.querySelector("#vize").innerHTML=vize;
+            getelementbyid direk    document.getElementById("vize").innerHTML=vize;
+
+        -->
+    </head>
+</html>
