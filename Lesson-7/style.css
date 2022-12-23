@@ -4,15 +4,13 @@
     width: 80%;
     border-radius: 20px;
     padding: 20px;
-
     position: relative;
     top: 20px;
-
-   /* bottom: 20px;*/
-  /*  position: fixed; sabit tutuyor*/
-  /*  position: sticky; sayfa kayarken sabit yerinde kalıyor
-  static normal hali
-  top: 20px;*/
+   /*bottom: 20px;
+    position: fixed; sabit tutuyor
+    position: sticky; sayfa kayarken sabit yerinde kalıyor
+    static normal hali
+    top: 20px;*/
 }
 .absolute{
     position: absolute;
@@ -20,7 +18,7 @@
     right: 10px;
     background-color: yellow;
 }
-#asd{
+#paragraph{
     width: 100px;
     height: 100px;
     background-color: brown;
